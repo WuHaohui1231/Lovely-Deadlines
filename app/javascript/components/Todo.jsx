@@ -19,7 +19,7 @@ const Todo = (props) => {
     }
 
     const completeHandler = () => {
-        //console.log("efa");
+
         let _todo = props.todo;
         let _todo_attributes = _todo.attributes
         _todo_attributes = {
@@ -31,7 +31,7 @@ const Todo = (props) => {
             attributes: _todo_attributes,
         }
         
-        //axios.get(url).then(resp => console.log(resp));
+        
         axios.patch(url, _todo_attributes)
         .then(() => {
             let _todos = props.todos.map(todo => {

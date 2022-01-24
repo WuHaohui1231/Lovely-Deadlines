@@ -12,13 +12,9 @@ const LovelyDeadlines = () => {
     const [status, setStatus] = useState('');
     const [filteredTodos, setFilteredTodos] = useState([]);
 
-    // const [taglist, setTaglist] = useState(["All", "Uncompleted", "Completed"]);
-    // const [options, setOptions] = useState([]);
-
     useEffect(() => {
         axios.get('api/v1/todos.json')
         .then( resp => {
-            //console.log(resp.data.data)
             setTodos(resp.data.data)
         })
         .catch( resp => console.log(resp) )
@@ -36,46 +32,20 @@ const LovelyDeadlines = () => {
         }
     });
 
-    //console.log(taglist);
 
     let options = taglist.map(tag => (
         <option key={tag} value={tag}>{tag}</option>
     ));
 
-    //console.log(options);
 
-
-    
-
-    //console.log("hey");
-
-
-    // useEffect(() => {
-    //     console.log('count2')
-    //     todos.map((todo) => {
-            
-    //         let _tag = todo.attributes.tag
-    //         console.log(_tag)
-    //         if(_tag !== "" && !(taglist.includes(_tag))) {
-    //             //console.log(_tag);
-    //             let newTaglist = [...taglist, _tag];
-    //             //console.log(newTaglist)
-    //             setTaglist(newTaglist);
-    //             //console.log(options);
-    //             // setOptions(taglist.map(tag => (
-    //             //     <option key={tag} value={tag}>{tag}</option>
-    //             // )));
-                
-    //         };
-    //         console.log(taglist);
-    //     });
-    // }, [todos.length]);
 
     useEffect(() => {
         //console.log("efae");
         filterHandler();
     }, [todos, status]);
 
+
+    //Tag System
     const filterHandler = () => {
 
         if(status === 'All') {
@@ -91,21 +61,6 @@ const LovelyDeadlines = () => {
         }
 
 
-        // switch(status) {
-        //     case 'Completed':
-        //         //console.log("fefse")
-        //         setFilteredTodos(todos.filter(todo => todo.attributes.completed === true));
-        //         break;
-        //     case 'Uncompleted':
-        //         setFilteredTodos(todos.filter(todo => todo.attributes.completed === false));
-        //         break;
-        //     case 'All':
-        //         setFilteredTodos(todos);
-        //         break;
-        //     case :
-        //         setFilteredTodos(todos.filter(todo => todo.attributes.tag === status));
-        //         break;
-        // }
     }
 
     return(

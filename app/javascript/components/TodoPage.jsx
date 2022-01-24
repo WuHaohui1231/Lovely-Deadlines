@@ -13,28 +13,10 @@ const TodoPage = () => {
     useEffect(() => {
         axios.get(url)
         .then(resp => {
-            //console.log(resp.data.data.attributes);
             setState(resp.data.data.attributes);
         });
     }, [])
 
-    // const updatedTodo = {
-    //     title: 'Reset',
-    //     description: 'Test',
-    //     tag: '',
-    //     completed: true,
-    //     deadline: 'faefget'
-    // }
-
-    // const test = () => {
-    //     axios.patch(url, updatedTodo);
-    // }
-
-    // const _title = await this.state.title;
-    // const _title_ = _title.slice();
-
-    // //To avoid the issue that heading change when editing
-    // console.log(state.title)
 
     return(
         <div>

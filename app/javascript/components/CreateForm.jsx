@@ -11,32 +11,6 @@ const CreateForm = (props) => {
     const [inputDescription, setInputDescription] = useState("");
     const [inputDeadline, setInputDeadline] = useState("");
     const [inputTag, setInputTag] = useState("");
-    //const [options, setOptions] = useState([]);
-
-    // const [taglist, setTaglist] = useState(["All", "Uncompleted", "Completed"]);
-    // const [options, setOptions] = useState([]);
-
-    // //console.log("hey");
-
-
-    // useEffect(() => {
-    //     props.todos.map((todo) => {
-            
-    //         let _tag = todo.attributes.tag
-    //         if(_tag !== "" && !taglist.includes(_tag)) {
-    //             //console.log(_tag);
-    //             setTaglist([...taglist, _tag]);
-    //             //console.log(options);
-    //             setOptions(taglist.map(tag => (
-    //                 <option key={tag} value={tag}>{tag}</option>
-    //             )));
-    //             console.log(taglist);
-    //         }
-    //     });
-    // }, [props.todos.length]);
-
-    // console.log(options);
-    // console.log(taglist);
 
     const refresh = () => {
         window.location.reload();
@@ -47,17 +21,14 @@ const CreateForm = (props) => {
     }
 
     const inputDescriptionHandler = (e) => {
-        //console.log(e);
         setInputDescription(e.target.value);
     }
 
     const inputDeadlineHandler = (e) => {
-        //console.log(e);
         setInputDeadline(e.target.value);
     }
 
     const inputTagHandler = (e) => {
-        //console.log(e);
         setInputTag(e.target.value);
     }
 
@@ -75,13 +46,6 @@ const CreateForm = (props) => {
         axios.post('api/v1/todos', newTodo)
         .then(refresh);
 
-        // props.setTodos([
-        //     ...props.todos, {
-        //         text: props.inputText,
-        //         completed: false,
-        //         id: Math.random() * 1000
-        //     }
-        // ]);
         setInputTitle("");
         setInputDescription("");
         setInputDeadline("");
@@ -93,20 +57,6 @@ const CreateForm = (props) => {
     }
 
 
-    // const refreshTags = () => {
-    //     props.todos.map((todo) => {
-    //         let _tag = todo.attributes.tag
-    //         if(_tag !== "" && !taglist.includes(_tag)) {
-    //             setTaglist([...taglist, _tag]);
-    //         }
-    //     });
-    // };
-
-
-    //console.log(taglist);
-    // let options = taglist.map(tag => (
-    //     <option key={tag} value={tag}>{tag}</option>
-    // ));
     
 
 
