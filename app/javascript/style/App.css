@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   body {
-    background-image: linear-gradient(120deg, #B3A1CD 0%, #6667AB 100%);
+    background-image: linear-gradient(120deg, #FA7268 20%, #B3A1CD 100%);
     color: white;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
@@ -32,6 +32,7 @@
     background: #f0f0f0;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 3rem;
   }
   form button:hover {
     background: #ff6f47;
@@ -135,4 +136,8 @@
 
   ul {
     list-style-type: none;
+  }
+  
+  p {
+    align-items: center;
   }

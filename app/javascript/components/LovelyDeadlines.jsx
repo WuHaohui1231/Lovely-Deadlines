@@ -83,6 +83,7 @@ const LovelyDeadlines = () => {
                 todos={todos}
                 setTodos={setTodos}
                 filteredTodos={filteredTodos}
+                setFilteredTodos={setFilteredTodos}
             />
         </div>
     );

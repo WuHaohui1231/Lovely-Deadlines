@@ -41,6 +41,7 @@ const UpdateForm = ({state, setState, url}) => {
                         fullWidth
                         variant='filled'
                         required
+                        style={{background: '#F0F0F0'}} 
                     />
 
 
@@ -53,6 +54,7 @@ const UpdateForm = ({state, setState, url}) => {
                         onChange={handleDescriptionChange}
                         fullWidth
                         variant='filled'
+                        style={{background: '#F0F0F0'}} 
                     />
                         
                     <TextField 
@@ -64,6 +66,7 @@ const UpdateForm = ({state, setState, url}) => {
                         onChange={handleDeadlineChange}
                         fullWidth
                         variant='filled'
+                        style={{background: '#F0F0F0'}} 
                     />
                         
                     <TextField 
@@ -75,6 +78,7 @@ const UpdateForm = ({state, setState, url}) => {
                         onChange={handleTagChange}
                         fullWidth
                         variant='filled'
+                        style={{background: '#F0F0F0'}} 
                     />
 
                     <div>Notice: Please wait for a few seconds before clicking update to allow system to record your change.</div>
