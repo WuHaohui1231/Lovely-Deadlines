@@ -80,9 +80,7 @@ const UpdateForm = ({state, setState, url}) => {
                         variant='filled'
                         style={{background: '#F0F0F0'}} 
                     />
-
-                    <div>Notice: Please wait for a few seconds before clicking update to allow system to record your change.</div>
-                        
+                      
                     <Button color='success' variant='contained' type='submit'>
                         Update
                     </Button>

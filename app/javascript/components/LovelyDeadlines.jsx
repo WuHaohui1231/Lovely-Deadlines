@@ -6,7 +6,7 @@ import TodoList from "./TodoList";
 
 const LovelyDeadlines = () => {
 
-    console.log("count")
+    //console.log("count")
     
     const [todos, setTodos] = useState([]);
     const [status, setStatus] = useState('');
@@ -85,6 +85,9 @@ const LovelyDeadlines = () => {
                 filteredTodos={filteredTodos}
                 setFilteredTodos={setFilteredTodos}
             />
+            <footer style={{textAlign: 'center'}}>
+                <br />Copyright © 2022 WU HAOHUI
+            </footer>
         </div>
     );
 };

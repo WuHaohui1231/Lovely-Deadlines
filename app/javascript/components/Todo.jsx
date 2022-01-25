@@ -16,11 +16,11 @@ const Todo = (props) => {
     //Delete todo with a confirmation
     const deleteHandler = () => {
 
-        if(confirm("Confirm Delete? Warning: This action is inreversible!")) {
+        if(confirm("Are you sure to delete " + props.todo.attributes.title + "?   Warning: This action is inreversible!")) {
             axios.delete(url)
             .then(() => props.setTodos(props.todos.filter(todo => todo.attributes.slug !== slug)));
         } else {
-            alert("Todo was not deleted.")
+            alert(props.todo.attributes.title + " was not deleted.")
         }
 
     }

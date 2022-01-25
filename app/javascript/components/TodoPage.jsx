@@ -30,7 +30,9 @@ const TodoPage = () => {
                 setState={setState}
                 url={url}
             />
-
+            <footer style={{textAlign: 'center'}}>
+                <br />Copyright © 2022 WU HAOHUI
+            </footer>
             
             
         </div>

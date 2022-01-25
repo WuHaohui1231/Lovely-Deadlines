@@ -1,5 +1,5 @@
 # README
 
-Name: Wu Haohui
+Name: WU HAOHUI
 
 Matriculation Number: A0245794N
