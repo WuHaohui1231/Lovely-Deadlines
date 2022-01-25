@@ -4,13 +4,14 @@ import Todo from './Todo';
 
 const TodoList = (props) => {
 
-
+    //Seach box state
     const [searchInput, setSearchInput] = useState("");
 
     const SearchHandler = (e) => {
         setSearchInput(e.target.value);
     }
 
+    //For search function
     useEffect(
         () => {
             props.setFilteredTodos(props.todos.filter((todo) => (

@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Todo = (props) => {
 
-
-
     const slug = props.todo.attributes.slug;
     const url = "api/v1/todos/" + slug;
 
@@ -24,6 +22,8 @@ const Todo = (props) => {
         }
 
     }
+
+    //Mark todo as completed with a message pop out or mark as uncompleted
 
     const completeHandler = () => {
 

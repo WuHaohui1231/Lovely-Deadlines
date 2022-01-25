@@ -1,15 +1,14 @@
 import axios from "axios";
 import React, {useState, useEffect} from "react";
-import "../style/App.css";
 import CreateForm from "./CreateForm";
 import TodoList from "./TodoList";
 
 const LovelyDeadlines = () => {
 
-    //console.log("count")
     
     const [todos, setTodos] = useState([]);
     const [status, setStatus] = useState('');
+    //To get origin to back after using tag system or search, create a new state
     const [filteredTodos, setFilteredTodos] = useState([]);
 
     useEffect(() => {
@@ -22,6 +21,7 @@ const LovelyDeadlines = () => {
     }, [todos.length]);
 
     
+    //Implement Tag System
 
     let taglist = ["All", "Uncompleted", "Completed"];
 
@@ -32,7 +32,6 @@ const LovelyDeadlines = () => {
         }
     });
 
-
     let options = taglist.map(tag => (
         <option key={tag} value={tag}>{tag}</option>
     ));
@@ -40,12 +39,10 @@ const LovelyDeadlines = () => {
 
 
     useEffect(() => {
-        //console.log("efae");
         filterHandler();
     }, [todos, status]);
 
 
-    //Tag System
     const filterHandler = () => {
 
         if(status === 'All') {
