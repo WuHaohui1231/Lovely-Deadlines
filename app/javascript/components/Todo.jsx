@@ -12,9 +12,16 @@ const Todo = (props) => {
 
     const navigateTo = useNavigate();
 
+
+    //Delete todo with a confirmation
     const deleteHandler = () => {
-        axios.delete(url)
-        .then(() => props.setTodos(props.todos.filter(todo => todo.attributes.slug !== slug)));
+
+        if(confirm("Confirm Delete? Warning: This action is inreversible!")) {
+            axios.delete(url)
+            .then(() => props.setTodos(props.todos.filter(todo => todo.attributes.slug !== slug)));
+        } else {
+            alert("Todo was not deleted.")
+        }
 
     }
 
@@ -45,6 +52,11 @@ const Todo = (props) => {
             
 
         });
+        if(_todo.attributes.completed) {
+            alert("Hooray! You've completed " + _todo.attributes.title + ".   " 
+            + "Tip: You can click the tick again to mark it as uncompleted");
+        }
+        
     }
     return (
         <div className="todo">

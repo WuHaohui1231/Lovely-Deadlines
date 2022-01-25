@@ -35,6 +35,12 @@ const CreateForm = (props) => {
     const submitTodoHandler = (e) => {
         e.preventDefault();
 
+        //prevent empty title input which will cause trouble to the app
+        if(!inputTitle) {
+            alert("Can not add todo with empty title");
+            return;
+        }
+
         let newTodo = {
             title: inputTitle,
             deadline: inputDeadline,
